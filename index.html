@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="grid_container">
+    <div class="grid">
+      <div class="report_section">
+        <div class="report_for">
+          <div class="profile_pic">
+            <img src="./images/image-jeremy.png" alt="user profile picture" width="100%">
+          </div>
+          <div class="profile_info">
+            <p class="profile_tag"> Report for </p>
+            <h1 class="profile_name"> Jeremy Robson </h1>
+          </div>
+        </div>
+        <div class="report_actions">
+          <ul id="timeframe-list">
+            <li onclick="updateData('daily', this);" class="active"><span>Daily</span></li>
+            <li onclick="updateData('weekly', this);"><span>Weekly</span></li>
+            <li onclick="updateData('monthly', this);"><span>Monthly</span></li>
+          </ul>
+        </div>
+      </div>
+      <!-- Activity boxes with unique IDs -->
+      <div id="work" class="box sub_box_work"></div>
+      <div id="play" class="box sub_box_play"></div>
+      <div id="study" class="box sub_box_study"></div>
+      <div id="exercise" class="box sub_box_exercise"></div>
+      <div id="social" class="box sub_box_social"></div>
+      <div id="self-care" class="box sub_box_self_care"></div>
+    </div>
+  </div>
+</body>
+
+</html>

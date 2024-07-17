@@ -1,0 +1,285 @@
+/*css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+:root {
+
+  --Blue: hsl(246, 80%, 60%);
+  --Light_red_work: hsl(15, 100%, 70%);
+  --Soft_blue_play: hsl(195, 74%, 62%);
+  --Light_red_study: hsl(348, 100%, 68%);
+  --Lime_green_exercise: hsl(145, 58%, 55%);
+  --Violet_social: hsl(264, 64%, 52%);
+  --Soft_orange_self_care: hsl(43, 84%, 65%);
+  --Very_dark_blue: hsl(226, 43%, 10%);
+  --Dark_blue: hsl(235, 46%, 20%);
+  --Desaturated_blue: hsl(236, 28%, 31%);
+  --Pale_Blue: hsl(236, 23%, 29%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  color: #fff;
+  background-color: var(--Very_dark_blue);
+  min-height: 100vh;
+
+}
+
+.grid_container {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.grid {
+  display: grid;
+  width: 100%;
+  gap: 1em;
+  grid-template-columns: repeat(12, 80px);
+  grid-template-rows: repeat(6, 80px);
+
+}
+
+.report_section {
+  grid-column: 1 / 4;
+  grid-row: 1 / 7;
+  border-radius: 1em;
+  background-color: var(--Dark_blue);
+}
+
+.report_for {
+
+  background-color: var(--Blue);
+  padding: 2em;
+  padding-bottom: 6em;
+  border-radius: 1em;
+}
+
+.profile_pic {
+  width: 80px;
+  height: 80px;
+  border-radius: 5in;
+  border: 2px solid #fff;
+}
+
+.profile_name {
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.profile_info {
+  padding-top: 4em;
+}
+
+.report_actions {
+  padding: 2em;
+
+}
+
+.report_actions ul li {
+  text-transform: capitalize;
+  margin-bottom: 0.5em;
+  font-size: 1.4em;
+  color: var(--Desaturated_blue);
+}
+
+.report_actions ul li.active {
+  color: #fff;
+}
+
+.sub_box_work,
+.sub_box_play,
+.sub_box_study {
+  grid-row: 1 / 4;
+  border-radius: 19px;
+}
+
+/*work*/
+.sub_box_work {
+  grid-column: 4 / 7;
+  background-color: var(--Light_red_work);
+}
+
+/*Play*/
+.sub_box_play {
+  grid-column: 7 / 10;
+  background-color: var(--Soft_blue_play);
+}
+
+/*Study*/
+.sub_box_study {
+  grid-column: 10 / 13;
+  background-color: var(--Light_red_study);
+}
+
+/*exercise*/
+.sub_box_exercise,
+.sub_box_social,
+.sub_box_self_care {
+  grid-row: 4 / 7;
+  border-radius: 19px;
+}
+
+.sub_box_exercise {
+  grid-column: 4 / 7;
+  background-color: var(--Lime_green_exercise);
+}
+
+/*social*/
+.sub_box_social {
+  grid-column: 7 / 10;
+  background-color: var(--Violet_social);
+}
+
+/*Self Care*/
+.sub_box_self_care {
+  grid-column: 10 / 13;
+  background-color: var(--Soft_orange_self_care);
+}
+
+.data {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.data_section {
+  grid-column: 1 / 6;
+  grid-row: 2 / 6;
+  z-index: 11;
+  border-radius: 1em;
+  padding: 1em;
+  background-color: var(--Dark_blue);
+}
+
+.data_icons {
+  width: 85px;
+  position: absolute;
+  right: 10px;
+  top: -10px;
+}
+
+.data_icons img {
+  max-width: 100%;
+}
+
+.data_heading {
+  display: flex;
+  font-size: 1.2em;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.data_count {
+  font-size: 3.5em;
+  font-weight: 100;
+}
+
+.data_last_count {
+  font-size: 1em;
+  color: #bbc0ff;
+}
+
+.data_info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.box:hover .data_section {
+  background-color: var(--Desaturated_blue);
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+#timeframe-list li {
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .grid_container {
+    padding: 8em 0;
+  }
+
+  .grid {
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+
+  }
+
+  .report_for {
+    padding: 1em;
+  }
+
+  .profile_info {
+    padding-top: 0em;
+  }
+
+  .report_section {
+    grid-column: 1 / 13;
+    grid-row: 1 / 4;
+
+  }
+
+  .box {
+    grid-column: 1 / 13
+  }
+
+  .sub_box_work {
+    grid-row: 4 / 6;
+  }
+
+  .sub_box_play {
+    grid-row: 6 / 8;
+  }
+
+  .sub_box_study {
+    grid-row: 8 / 10;
+  }
+
+  .sub_box_exercise {
+    grid-row: 10 / 12;
+  }
+
+  .sub_box_social {
+    grid-row: 12 / 14;
+  }
+
+  .sub_box_self_care {
+    grid-row: 14 / 16;
+  }
+
+  .data_icons {
+    width: 50px;
+  }
+
+  .profile_name {
+    font-size: 2.3em;
+  }
+
+  .data_count {
+    font-size: 2em;
+
+  }
+
+  .data_last_count {
+    font-size: 0.6em;
+
+  }
+}
